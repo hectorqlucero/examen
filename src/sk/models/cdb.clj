@@ -104,7 +104,7 @@
   CONSTRAINT fk_asignatura FOREIGN KEY (asignatura_id) REFERENCES asignatura(id) ON UPDATE CASCADE ON DELETE CASCADE,
   CONSTRAINT fk_grado FOREIGN KEY (grado_id) REFERENCES grado(id) ON UPDATE CASCADE ON DELETE CASCADE
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8")
-(Query! db preguntas-sql)
+
 (def preguntas-rows
   [{:id 1
     :pregunta "2 + 2 = ?"

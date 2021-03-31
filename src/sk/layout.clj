@@ -17,7 +17,7 @@
      [:span.navbar-toggler-icon]]
     [:div#collapsibleNavbar.collapse.navbar-collapse
      [:ul.navbar-nav
-      [:li.nav-item [:a.nav-link {:href "#"} "Menu 1"]]
+      [:li.nav-item [:a.nav-link {:href "/examen"} "Examen"]]
       [:li.nav-item [:a.nav-link {:href "#"} "Menu 2"]]
       [:li.nav-item [:a.nav-link {:href "#"} "Menu 3"]]
       [:li.nav-item [:a.nav-link {:href "#"} "Menu 4"]]
