@@ -38,7 +38,7 @@
      [:div.easyui-panel {:style "width:100%;
                                 max-width:600px;
                                 padding:30px 60px"
-                         :title (str title " - Pedro Pacas")
+                         :title (str title " Matematicas - Pedro Pacas")
                          :data-options "style:{margin:'0 auto'}"}
       [:form.fm {:method "post"
                  :enctype "multipart/form-data"}
