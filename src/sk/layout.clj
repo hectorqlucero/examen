@@ -18,10 +18,6 @@
     [:div#collapsibleNavbar.collapse.navbar-collapse
      [:ul.navbar-nav
       [:li.nav-item [:a.nav-link {:href "/examen"} "Examen"]]
-      [:li.nav-item [:a.nav-link {:href "#"} "Menu 2"]]
-      [:li.nav-item [:a.nav-link {:href "#"} "Menu 3"]]
-      [:li.nav-item [:a.nav-link {:href "#"} "Menu 4"]]
-      [:li.nav-item [:a.nav-link {:href "#"} "Menu 5"]]
       [:li.nav-item.dropdown
        [:a.nav-link.dropdown-toggle {:href "#"
                                      :id "navdrop"
@@ -33,7 +29,6 @@
           (= (user-level) "A")
           (= (user-level) "S"))
         [:li.nav-item [:a.nav-link {:href "/admin/users"} "Usuarios"]])
-      [:li.nav-item [:a.nav-link {:href "#"} "Menu 6"]]
       [:li.nav-item [:a.nav-link {:href "/home/logoff"} "Salir"]]]]]))
 
 (defn menus-public []
