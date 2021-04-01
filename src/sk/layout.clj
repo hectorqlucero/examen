@@ -24,11 +24,6 @@
                                      :data-toggle "dropdown"} "Administrar"]
        [:div.dropdown-menu
         (build-admin)]]
-      (when
-        (or
-          (= (user-level) "A")
-          (= (user-level) "S"))
-        [:li.nav-item [:a.nav-link {:href "/admin/users"} "Usuarios"]])
       [:li.nav-item [:a.nav-link {:href "/home/logoff"} "Salir"]]]]]))
 
 (defn menus-public []
