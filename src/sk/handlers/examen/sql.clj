@@ -11,5 +11,5 @@
 (def opciones-sql
   "SELECT
   opcion
-  FROM opciones o
+  FROM opciones
   WHERE preguntas_id = ?")

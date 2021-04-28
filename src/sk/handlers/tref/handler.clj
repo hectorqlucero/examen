@@ -1,6 +1,7 @@
 (ns sk.handlers.tref.handler
   (:require [sk.models.crud :refer [db Query]]
             [sk.models.util :refer [parse-int
+                                    zpl
                                     get-image
                                     current_year]]))
 
@@ -65,6 +66,21 @@
         years  (concat pyears nyears)]
     years))
 
+(defn build-time
+  "Builds tipical time dropdown"
+  []
+  (let [items (flatten
+                (for [x (range 5 21)]
+                  (list
+                    {:value (str (zpl x 2) ":00")
+                     :text (if (< x 12) 
+                             (str (zpl x 2) ":00 AM")
+                             (str (if (> x 12) (zpl (- x 12) 2) (zpl x 2)) ":00 PM"))}
+                    {:value (str (zpl x 2) ":30")
+                     :text (if (< x 12) 
+                             (str (zpl x 2) ":30 AM")
+                             (str (if (> x 12) (zpl (- x 12) 2) (zpl x 2)) ":30 PM"))})))]
+    items))
 (defn imagen [table field idname value & extra-folder]
   (get-image table field idname value (first extra-folder)))
 

@@ -8,11 +8,6 @@
                                     build-radio-buttons]]))
 
 (def cnt (atom 0))
-(def opt (atom 64))
-
-; (defn build-opcion [row]
-;   (list
-;     [:div.col (str (char (swap! opt inc)) ") " (:opcion row))]))
 
 (defn build-opciones [label id rows]
   [:div.form-group.col-10
@@ -27,7 +22,6 @@
                       :data-options the-options}]])) rows)])
 
 (defn build-pregunta [title row]
-  (reset! opt 64)
   (build-opciones (:pregunta row) (:id row) (Query db [opciones-sql (:id row)])))
 
 (defn examen-view
